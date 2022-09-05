@@ -1,18 +1,30 @@
 // using IndexOf
 
-const fullName = "Peter Heronimous Lind";
-const firstName = "Peter";
-const indexOfFirst = fullName.indexOf(firstName);
-console.log(firstName);
+// const fullName = "Peter Heronimous Lind";
+// const firstName = fullName.substring(0, fullName.indexOf(" "));
 
-const MiddleName = "Heronimous";
-const indexOfMiddle = fullName.indexOf(MiddleName);
-console.log(MiddleName);
+// console.log(firstName);
 
-const LastName = "Lind";
-const indexOfLast = fullName.indexOf(LastName);
-console.log(LastName);
-// using Substrings
-console.log(fullName.substring(0, 6));
-console.log(fullName.substring(6, 16));
-console.log(fullName.substring(17, 22));
+// const MiddleName = fullName.substring(fullName.indexOf(" ") + 1, fullName.lastIndexOf(" "));
+
+// console.log(MiddleName);
+
+// const LastName = fullName.substring(fullName.lastIndexOf(" ") + 1);
+
+// console.log(LastName);
+
+// //////////////////////////////////////////////////////////////////////////////////
+const fullName = "Peter Lind";
+getNameParts(fullName);
+function getNameParts(fullName) {
+  const firstName = fullName.substring(0, fullName.indexOf(" "));
+
+  const middleName = fullName.substring(fullName.indexOf(" ") + 1, fullName.lastIndexOf(" "));
+
+  //   if (middleName === null) {
+  //     console.log(undefined);
+  //   }
+
+  const lastName = fullName.substring(fullName.lastIndexOf(" ") + 1);
+  console.log({ firstName, middleName, lastName });
+}
