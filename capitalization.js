@@ -10,8 +10,7 @@
 const str = "nAncy";
 capitalize(str);
 function capitalize(str) {
-  str = str[0].toUpperCase() + str.substring(1).toLowerCase();
-  return str;
+  return (str = str[0].toUpperCase() + str.substring(1).toLowerCase());
 }
 
 const givenname = "peTER";
