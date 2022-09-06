@@ -6,9 +6,14 @@
 // console.log(endName);
 // const newName = startName + endName;
 // console.log(newName);
+// ///////////////////////////////////////////////////////////
 const str = "nAncy";
 capitalize(str);
 function capitalize(str) {
   str = str[0].toUpperCase() + str.substring(1).toLowerCase();
-  console.log(str);
+  return str;
 }
+
+const givenname = "peTER";
+const cap = capitalize(givenname);
+console.log(cap);
