@@ -14,9 +14,10 @@ function hexToRGB(hex) {
 rgbToHEX(12, 2, 17);
 function rgbToHEX(r, g, b) {
   //   console.log("r: ", r, "g: ", g, "b: ", b);
-  let hex1 = r.toString(16);
-  let hex2 = g.toString(16);
-  let hex3 = b.toString(16);
+  let hex1 = r.toString(16).padStart(2, "0");
+  let hex2 = g.toString(16).padStart(2, "0");
+  let hex3 = b.toString(16).padStart(2, "0");
+
   //   console.log(hex1, hex2, hex3);
   //   console.log(`rgb: #${hex1}${hex2}${hex3}`);
   if (hex1.length >= 0 || hex2.length >= 0 || hex3.length >= 0) {
