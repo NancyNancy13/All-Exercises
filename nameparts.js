@@ -40,13 +40,17 @@
 //   }
 // }
 // // ///////////////////////////////////////////////////////////////////
-const nameString = `Albus Percival Wulfric Brian Dumbledore`;
+
+const fullName = `Albus Percival Wulfric Brian Dumbledore`;
+getNameParts(fullName);
 function getNameParts(fullName) {
-  let firstName = fullName.substring(0, fullName.indexOf(" "));
+  const firstName = fullName.substring(0, fullName.indexOf(" "));
   let middleName = fullName.substring(fullName.indexOf(" ") + 1, fullName.lastIndexOf(" "));
   let LastName = fullName.substring(fullName.lastIndexOf(" ") + 1);
   fullName = `${firstName} ${middleName} ${LastName}`;
-  console.log(firstName);
+  console.log("firstName: ", firstName);
+  console.log("middleName: ", middleName);
+  console.log("lastName: ", LastName);
 
   if (middleName == null) {
     return `${firstName} ${LastName}`;
