@@ -11,6 +11,7 @@ function hexToRGB(hex) {
   return { r, g, b };
 }
 
+// converting rgb to hex
 rgbToHEX(12, 2, 17);
 function rgbToHEX(r, g, b) {
   //   console.log("r: ", r, "g: ", g, "b: ", b);
@@ -20,7 +21,10 @@ function rgbToHEX(r, g, b) {
 
   //   console.log(hex1, hex2, hex3);
   //   console.log(`rgb: #${hex1}${hex2}${hex3}`);
-  if (hex1.length >= 0 || hex2.length >= 0 || hex3.length >= 0) {
-    console.log(`rgb: #${hex1}${hex2}${hex3}`);
-  }
+  // if (hex1.length >= 0 || hex2.length >= 0 || hex3.length >= 0) {
+  //   console.log(`rgb: #${hex1}${hex2}${hex3}`);
+  // }
+  let hexValue = `#${r}${g}${b}`;
+  return hexValue;
 }
+// console.log(rgbToHEX(475, 2, 222));
